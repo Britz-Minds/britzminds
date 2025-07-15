@@ -39,7 +39,11 @@ const Login = () => {
       setLoginInput({ ...loginInput, [name]: value });
     }
   };
-
+const handleRegistration=(type)=> {
+  console.log(signupInput);
+  console.log(loginInput);
+  
+}
   return (
     <div className="flex items-center w-full justify-center">
       <Tabs defaultValue="account" className="w-[400px]">
@@ -92,7 +96,7 @@ const Login = () => {
               </div>
             </CardContent>
             <CardFooter>
-              <Button>Sign Up</Button>
+              <Button onClick={()=>handleRegistration("signup")}>Sign Up</Button>
             </CardFooter>
           </Card>
         </TabsContent>
@@ -130,7 +134,7 @@ const Login = () => {
               </div>
             </CardContent>
             <CardFooter>
-              <Button>Login</Button>
+              <Button onClick={()=>handleRegistration("login")}>Login</Button>
             </CardFooter>
           </Card>
         </TabsContent>
