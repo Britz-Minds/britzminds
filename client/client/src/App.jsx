@@ -1,14 +1,11 @@
-import './App.css'
-import {Button} from './components/ui/button'
-import Login from './pages/Login'
+import { Toaster } from 'react-hot-toast';
+
 function App() {
-  
   return (
-    <main>
-      <Login/>
-    </main>
-
-  )
+    <>
+      <Login />
+      <Toaster position="top-right" reverseOrder={false} />
+    </>
+  );
 }
-
-export default App
+export default App;
